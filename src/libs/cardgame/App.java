@@ -15,14 +15,14 @@ class DemoCardGameApp {
         int dial = kb.nextInt();
 
         switch (dial) {
-            case 1 -> deckGame();
+            case 1 -> createDeck();
             case 2 -> pickCards();
             default -> System.out.println("invalid operation");
         }
     }
 
-    public static void deckGame() {
-        for (Card card : Card.createDeck())
+    public static void createDeck() {
+        for (Card card : Card.newDeck())
             System.out.println(card.toString());
     }
 
